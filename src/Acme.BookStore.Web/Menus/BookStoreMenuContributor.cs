@@ -36,19 +36,19 @@ public class BookStoreMenuContributor : IMenuContributor
             )
         );
 
-        context.Menu.AddItem(
-       new ApplicationMenuItem(
-           "BooksStore",
-           l["Menu:BookStore"],
-           icon: "fa fa-book"
-       ).AddItem(
-           new ApplicationMenuItem(
-               "BooksStore.Books",
-               l["Menu:Books"],
-               url: "/Books"
-           ).RequirePermissions(BookStorePermissions.Books.Default) // Check the permission!
-       )
-   );
+   //     context.Menu.AddItem(
+   //    new ApplicationMenuItem(
+   //        "BooksStore",
+   //        l["Menu:BookStore"],
+   //        icon: "fa fa-book"
+   //    ).AddItem(
+   //        new ApplicationMenuItem(
+   //            "BooksStore.Books",
+   //            l["Menu:Books"],
+   //            url: "/Books"
+   //        ).RequirePermissions(BookStorePermissions.Books.Default) // Check the permission!
+   //    )
+   //);
 
         context.Menu.AddItem(
     new ApplicationMenuItem(
@@ -61,6 +61,7 @@ public class BookStoreMenuContributor : IMenuContributor
             l["Menu:Books"],
             url: "/Books"
         ).RequirePermissions(BookStorePermissions.Books.Default)
+
     ).AddItem( // ADDED THE NEW "AUTHORS" MENU ITEM UNDER THE "BOOK STORE" MENU
         new ApplicationMenuItem(
             "BooksStore.Authors",
